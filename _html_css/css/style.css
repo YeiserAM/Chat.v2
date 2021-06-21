@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #cf0808;
-	--dark-color-b: #af0000;
-	--light-color: #e6e9ff;
+	--dark-color-a:#b73e19e9;
+	--dark-color-b: #ec711ecd;
+	--light-color: #020101;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
 }
@@ -17,8 +17,13 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
 	margin: 20px;
+	background: #c31432;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
 }
 
 ul {
@@ -32,24 +37,26 @@ a {
 .btn {
 	cursor: pointer;
 	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
+	background: #e4ad16c9;
+	color:black;
 	border: 0;
 	font-size: 17px;
+	border-radius: 20px;
 }
+
 
 /* Chat Page */
 
 .chat-container {
 	max-width: 1100px;
-	background: #fff;
+	background:  linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 	margin: 30px auto;
 	overflow: hidden;
 }
 
 .chat-header {
 	background: var(--dark-color-a);
-	color: #fff;
+	color: #e4ad16c9;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	padding: 15px;
@@ -65,9 +72,10 @@ a {
 
 .chat-sidebar {
 	background: var(--dark-color-b);
-	color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
+
 }
 
 .chat-sidebar h2 {
@@ -75,10 +83,14 @@ a {
 	background: rgba(0, 0, 0, 0.1);
 	padding: 10px;
 	margin-bottom: 20px;
+	border-radius: 20px;
+
 }
 
 .chat-sidebar h3 {
 	margin-bottom: 15px;
+	color: black;
+	
 }
 
 .chat-sidebar ul li {
@@ -94,8 +106,9 @@ a {
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-	background-color: var(--light-color);
-	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 20px;
+	overflow-wrap: break-word;
 }
 
 .chat-messages .message .meta {
@@ -103,11 +116,13 @@ a {
 	font-weight: bold;
 	color: var(--dark-color-b);
 	opacity: 0.7;
-	margin-bottom: 7px;
+	margin-bottom: 8px;
+	margin-left: 5px;
+	
 }
 
 .chat-messages .message .meta span {
-	color: #777;
+	color: rgb(0, 0, 0);
 }
 
 .chat-form-container {
@@ -130,7 +145,7 @@ a {
 .join-container {
 	max-width: 500px;
 	margin: 80px auto;
-	color: #fff;
+	color: rgb(0, 0, 0);
 }
 
 .join-header {
@@ -184,6 +199,6 @@ a {
 	}
 
 	.chat-sidebar {
-		display: none;
+		display: flexbox;
 	}
 }

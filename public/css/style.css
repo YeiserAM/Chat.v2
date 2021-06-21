@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #5b0000;
-	--dark-color-b: #b20000;
-	--light-color: #ffffff;
+	--dark-color-a:#b73e19e9;
+	--dark-color-b: #ec711ecd;
+	--light-color: #020101;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
 }
@@ -18,8 +18,12 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	margin: 20px;
-	background: rgb(131,58,180);
-	background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	background: #c31432;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
 }
 
 ul {
@@ -33,7 +37,7 @@ a {
 .btn {
 	cursor: pointer;
 	padding: 5px 15px;
-	background: rgb(224, 218, 22);
+	background: #e4ad16c9;
 	color:black;
 	border: 0;
 	font-size: 17px;
@@ -45,14 +49,14 @@ a {
 
 .chat-container {
 	max-width: 1100px;
-	background: #fff;
+	background:  linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 	margin: 30px auto;
 	overflow: hidden;
 }
 
 .chat-header {
 	background: var(--dark-color-a);
-	color: rgb(224, 218, 22);
+	color: #e4ad16c9;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	padding: 15px;
@@ -68,7 +72,7 @@ a {
 
 .chat-sidebar {
 	background: var(--dark-color-b);
-	color: #fff;
+	color: rgb(255, 255, 255);
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
 
@@ -102,7 +106,7 @@ a {
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-	background-color: rgba(199, 199, 199, 0.85);
+	background-color: rgba(255, 255, 255, 0.85);
 	border-radius: 20px;
 	overflow-wrap: break-word;
 }
@@ -141,7 +145,7 @@ a {
 .join-container {
 	max-width: 500px;
 	margin: 80px auto;
-	color: #fff;
+	color: rgb(0, 0, 0);
 }
 
 .join-header {
